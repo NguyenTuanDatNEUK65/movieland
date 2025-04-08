@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Lẻ - MovieLand</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="MovieLand">
+                    <span class="logo-text" style="font-family: ClarenceTwo; font-size: 30px;">MovieLand</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm phim, diễn viên">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="navigation">
+                <a href="phim-bo.html">Phim Bộ</a>
+                <a href="phim-le.html" class="active">Phim Lẻ</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Thể Loại <i class="fas fa-caret-down"></i></a>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Quốc Gia <i class="fas fa-caret-down"></i></a>
+                </div>
+            </div>
+            <div class="login-button">
+                <button>Đăng Nhập</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Tiêu đề trang -->
+        <section class="page-title">
+            <div class="container">
+                <h1>Phim Lẻ</h1>
+                <p>Danh sách phim lẻ hay nhất, cập nhật mới nhất</p>
+            </div>
+        </section>
+
+        <!-- Bộ lọc phim -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-item">
+                        <label>Thể loại:</label>
+                        <select id="category-filter">
+                            <option value="">Tất cả</option>
+                            <option value="hanh-dong">Hành Động</option>
+                            <option value="vien-tuong">Viễn Tưởng</option>
+                            <option value="tinh-cam">Tình Cảm</option>
+                            <option value="chinh-kich">Chính Kịch</option>
+                            <option value="bi-an">Bí Ẩn</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Quốc gia:</label>
+                        <select id="country-filter">
+                            <option value="">Tất cả</option>
+                            <option value="trung-quoc">Trung Quốc</option>
+                            <option value="han-quoc">Hàn Quốc</option>
+                            <option value="my">Mỹ</option>
+                            <option value="viet-nam">Việt Nam</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Năm:</label>
+                        <select id="year-filter">
+                            <option value="">Tất cả</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Danh sách phim -->
+        <section class="movies-list">
+            <div class="container">
+                <div id="movies-container" class="movie-grid">
+                    <!-- Phim sẽ được tải từ API qua JavaScript -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Đang tải phim...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phân trang -->
+        <section class="pagination">
+            <div class="container">
+                <div class="pagination-controls">
+                    <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Trang trước</button>
+                    <span id="current-page">Trang 1</span>
+                    <button id="next-page">Trang sau <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/images/logo.png" alt="MovieLand">
+                <span >MovieLand</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2023 MovieLand. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/phim-le.js"></script>
+</body>
+</html> 

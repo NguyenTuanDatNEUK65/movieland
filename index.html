@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieLand</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="MovieLand">
+                    <span class="logo-text" style="font-family: ClarenceTwo; font-size: 30px;">MovieLand</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm phim, diễn viên">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="navigation">
+                <a href="phim-bo.html">Phim Bộ</a>
+                <a href="phim-le.html">Phim Lẻ</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Thể Loại <i class="fas fa-caret-down"></i></a>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Quốc Gia <i class="fas fa-caret-down"></i></a>
+                </div>
+            </div>
+            <div class="login-button">
+                <button>Đăng Nhập</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner/Slider section -->
+        <section class="hero-banner">
+            <div class="banner-content">
+                <h1>Niệm Vô Song</h1>
+                <div class="movie-tags">
+                    <span class="tag">Chính Kịch</span>
+                    <span class="tag">Cổ Trang</span>
+                    <span class="tag">Tình Cảm</span>
+                    <span class="tag">Tâm Lý</span>
+                </div>
+                <p class="movie-description">
+                    Niệm Vô Song là câu chuyện tình cảm động lòng người giữa thần nữ Vô Song và Tộc trưởng Hộ tộc Nguyên Trọng. Sau khi thành vật Thần Thú của thần giới rơi xuống nhân gian...
+                </p>
+                <div class="action-buttons">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <button class="like-btn"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="slider-navigation">
+                <div class="slider-dots">
+                    <!-- Thumbnail images would go here -->
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Category Section -->
+        <section class="category-section">
+            <h2>Bạn đang quan tâm gì ?</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card"></a>
+                <a href="#" class="category-card">Viễn Tưởng</a>
+                <a href="#" class="category-card">Bí Ẩn</a>
+                <a href="#" class="category-card">Tâm Lý</a>
+                <a href="#" class="category-card">Âm Nhạc</a>
+                <a href="#" class="category-card">Hài Hước</a>
+                
+                <a href="#" class="category-card">Khoa Học</a>
+                <a href="#" class="category-card">Kinh Điển</a>
+                <a href="#" class="category-card">Cổ Trang</a>
+                <a href="#" class="category-card">Kinh Dị</a>
+                <a href="#" class="category-card">Phim 18+</a>
+                <a href="#" class="category-card">Thể Thao</a>
+                
+                <a href="#" class="category-card">Gia Đình</a>
+                <a href="#" class="category-card">Hình Sự</a>
+                <a href="#" class="category-card">Thần Thoại</a>
+                <a href="#" class="category-card">Chiến Tranh</a>
+                <a href="#" class="category-card">Tài Liệu</a>
+                <a href="#" class="category-card">Tình Cảm</a>
+                
+                <a href="#" class="category-card">Phiêu Lưu</a>
+                <a href="#" class="category-card">Học Đường</a>
+                <a href="#" class="category-card">Võ Thuật</a>
+                <a href="#" class="category-card">Chính Kịch</a>
+            </div>
+        </section>
+
+        <!-- All Videos Section -->
+        <section class="videos-section">
+            <h2>All Videos</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Khi cuộc đời cho bạn quả quýt</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Tình Cảm, Hài Hước</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Nghề siêu khó</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Hành Động, Hình Sự</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Nghề siêu khó nói</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Hài Hước</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Ngoài vòng pháp luật 2</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Hành Động, Hình Sự</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Niệm vô song</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Chính Kịch, Cổ Trang</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second row of movies -->
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Chứng ta của sau này</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Tình Cảm, Tâm Lý</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Bí mật đảo thiên đường</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Bí Ẩn, Phiêu Lưu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Tình yêu và giông tố</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Tình Cảm, Tâm Lý</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Cuộc chiến vương quyền</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Cổ Trang, Viễn Tưởng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-poster"></div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Chiến binh bất tử</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span> • Hành Động, Viễn Tưởng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/images/logo.png" alt="MovieLand">
+                <span>MovieLand</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Về chúng tôi</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2023 MovieLand. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="/public/js/dropdown.js"></script>
+    <script src="/public/js/script.js"></script>
+</body>
+</html> 

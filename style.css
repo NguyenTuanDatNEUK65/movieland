@@ -1,0 +1,794 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+@font-face {
+    font-family: 'ClarenceTwo';
+    src: url('/font/ClarenceTwo-Regular.ttf') format('truetype');
+  }
+body {
+    background-color: #fff5f8;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Thêm style mới cho thẻ a trong logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Loại bỏ gạch chân của link */
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 8px;
+    background-color: #ff6b95; /* Placeholder for the logo */
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #ff6b95;
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 300px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px 15px;
+    border: 1px solid #ff6b95;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    outline: none;
+    padding-right: 40px;
+}
+
+.search-button {
+    background-color: #ff6b95;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navigation a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.dropdown {
+    position: relative;
+    margin: 0 10px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-toggle i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    z-index: 200;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Thể loại dropdown rộng hơn */
+.dropdown.genre-dropdown .dropdown-menu {
+    width: 500px;
+}
+
+/* Quốc gia dropdown nhỏ hơn */
+.dropdown.country-dropdown .dropdown-menu {
+    width: 480px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-column {
+    padding: 0 8px;
+}
+
+.genre-column {
+    width: 20%; /* 5 cột cho thể loại */
+}
+
+.country-column {
+    width: 25%; /* 4 cột cho quốc gia */
+}
+
+.dropdown-link {
+    display: block;
+    color: #ff6b95;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border-radius: 5px;
+    text-align: left;
+    white-space: nowrap;
+    margin: 2px 5px;
+    width: auto;
+}
+
+.dropdown-link:hover {
+    background-color: #ffdbea;
+    transform: scale(1.02);
+}
+
+.login-button button {
+    background-color: #ff6b95;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Hero Banner Section */
+.hero-banner {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('placeholder-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner-content {
+    max-width: 600px;
+    margin-top: 60px;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.movie-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.movie-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.play-btn, .like-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.play-btn {
+    background-color: #ff6b95;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.like-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.slider-dots {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    border: 2px solid #ff6b95;
+}
+
+.next-slide {
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Category Section */
+.category-section {
+    padding: 30px 40px;
+}
+
+.category-section h2 {
+    color: #ff3e79;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    background-color: #ffdbea;
+    color: #ff3e79;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.category-card:hover {
+    background-color: #ff6b95;
+    color: white;
+}
+
+/* Videos Section */
+.videos-section {
+    padding: 20px 40px 50px;
+}
+
+.videos-section h2 {
+    color: #ff3e79;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster {
+    height: 250px;
+    background-color: #ddd; /* Placeholder color */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.movie-info {
+    padding: 10px 12px;
+    background-color: white;
+}
+
+.movie-card .movie-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 40px;
+    line-height: 1.3;
+}
+
+.movie-card .movie-meta {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.movie-card .movie-quality {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b95;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.movie-card .movie-episode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.movie-year {
+    color: #777;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.movie-categories {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+    background-color: #ff6b95;
+    border-radius: 8px;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #ddd;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .movie-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .search-bar {
+        order: 3;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+    
+    .category-grid, .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .banner-content {
+        margin-top: 30px;
+    }
+    
+    .movie-card .movie-poster {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .movie-card .movie-poster {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .navigation {
+        display: none;
+    }
+    
+    .hero-banner {
+        height: 400px;
+    }
+}
+
+/* Trang phim lẻ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    color: #ff3e79;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #666;
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+}
+
+.filter-item label {
+    margin-right: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+.filter-item select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.movies-list {
+    padding: 20px 0 40px;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+}
+
+.loading i {
+    font-size: 2rem;
+    color: #ff6b95;
+    margin-bottom: 15px;
+}
+
+.pagination {
+    margin: 30px 0 50px;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination-controls button {
+    background-color: #ff6b95;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Hiển thị active link trong navigation */
+.navigation a.active {
+    color: #ff6b95;
+    font-weight: 600;
+}
+
+/* Responsive cho trang phim lẻ */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .filter-item select {
+        width: 100%;
+    }
+}
+
+/* Thông báo lỗi và cảnh báo */
+.error-message, .no-results, .cors-warning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-message i, .no-results i {
+    font-size: 3rem;
+    color: #ff6b95;
+    margin-bottom: 15px;
+}
+
+.error-message p, .no-results p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.error-message button {
+    background-color: #ff6b95;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cors-info-container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cors-warning {
+    background-color: #fff9f0;
+    border: 1px solid #ffe0b2;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.cors-warning h3 {
+    color: #ff6d00;
+    margin-bottom: 10px;
+}
+
+.cors-warning p, .cors-warning ol {
+    color: #555;
+    line-height: 1.6;
+}
+
+.cors-warning ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.cors-warning li {
+    margin-bottom: 5px;
+}
+
+/* Đảm bảo font-family được áp dụng cho tất cả thành phần quan trọng */
+.movie-title, 
+.movie-meta, 
+.filter-item label,
+.filter-item select,
+.pagination-controls span,
+.pagination-controls button,
+.movie-tags .tag,
+.movie-description,
+.page-title h1,
+.page-title p,
+.category-card,
+.error-message p,
+.no-results p,
+.cors-warning p,
+.cors-warning li {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Fix cho một số trường hợp đặc biệt */
+select, input, button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Đảm bảo font trong phần footer */
+.footer-container p,
+.footer-links a {
+    font-family: 'Quicksand', sans-serif;
+} 
